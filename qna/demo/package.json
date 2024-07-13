@@ -12,7 +12,7 @@
     "@tensorflow-models/qna": "file:../dist"
   },
   "scripts": {
-    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open",
+    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open --https",
     "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./",
     "build-deps": "yarn build-qna",
     "build-qna": "cd .. && yarn && yarn build-npm",

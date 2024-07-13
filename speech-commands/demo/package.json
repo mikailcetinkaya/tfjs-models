@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build-model": "cd .. && yarn && yarn build",
-    "watch": "yarn build-model && cross-env NODE_OPTIONS=--max_old_space_size=4096 NODE_ENV=development parcel index.html --no-hmr --open",
+    "watch": "yarn build-model && cross-env NODE_OPTIONS=--max_old_space_size=4096 NODE_ENV=development parcel index.html --no-hmr --open --https",
     "build": "yarn build-model && cross-env NODE_OPTIONS=--max_old_space_size=4096 NODE_ENV=production parcel build index.html --public-url ./",
     "lint": "eslint .",
     "link-local": "yalc link @tensorflow-models/speech-commands"

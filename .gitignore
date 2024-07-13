@@ -2,6 +2,7 @@
 node_modules
 dist/
 clone/
+.idea
 
 */diff
 **/*/node_modules

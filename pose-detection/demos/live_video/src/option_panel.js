@@ -46,6 +46,11 @@ export async function setupDatGui(urlParams) {
   sizeController.onChange(_ => {
     params.STATE.isSizeOptionChanged = true;
   });
+  const backController = cameraFolder.add(
+      params.STATE.camera, 'backCamera', false);
+  backController.onChange(_ => {
+    params.STATE.isSizeOptionChanged = true;
+  });
   cameraFolder.open();
 
   // The model folder contains options for model selection.

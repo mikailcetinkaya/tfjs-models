@@ -1,4 +1,5 @@
-# Pre-trained TensorFlow.js models
+# Pre-trained TensorFlow.js models for Windows
+#### --Pre development for windows part is my addition --
 
 This repository hosts a set of pre-trained models that have been ported to
 TensorFlow.js.
@@ -144,6 +145,40 @@ and can be used as building blocks in other apps.
     <td><a href="./knn-classifier/demo">source</a></td>
   </tr>
 </table>
+
+## Pre development for windows
+### Before Clone this Repo
+git should be installed with gitbash enabled for global cmd usage
+
+node should be installed with additional components like VS runtimes
+
+open developer mode for windows for symlink creation 
+
+set git config properties in your cmd run as administrator like below.
+
+`git config --global core.symlinks true`
+
+`git config --system core.symlinks true`
+
+### After cloning 
+for utils to be ready run at the root folder:
+
+`yarn`
+
+for problems that are because of fixed version packages run at root on gitbash
+
+`./update_yarn_lock.sh`
+
+that should take a while
+
+### Things i have added
+
+I added `--https` to package.json watch commands to package.json watch commands 
+
+added demos folder update to update_yarn_lock.sh
+
+added back camera support to pose-detection live_video demo
+
 
 ## Development
 

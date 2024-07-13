@@ -89,7 +89,7 @@ async function createDetector() {
 
 async function checkGuiUpdate() {
   if (STATE.isTargetFPSChanged || STATE.isSizeOptionChanged) {
-    camera = await Camera.setupCamera(STATE.camera);
+    camera = await Camera.setup(STATE.camera);
     STATE.isTargetFPSChanged = false;
     STATE.isSizeOptionChanged = false;
   }

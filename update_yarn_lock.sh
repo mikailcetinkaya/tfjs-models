@@ -32,5 +32,13 @@ for dir in */; do
       update
       cd ".."
     fi
+    # demos folders were forgotten
+    cd "$dir""demos"
+    if [ $? -eq 0 ]; then
+      echo `pwd`
+      update
+      cd ".."
+    fi
 done
 
+exit

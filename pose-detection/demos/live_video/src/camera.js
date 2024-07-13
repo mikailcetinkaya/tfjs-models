@@ -37,7 +37,7 @@ export class Camera {
     const videoConfig = {
       'audio': false,
       'video': {
-        facingMode: 'user',
+        facingMode: !cameraParam.backCamera?'user':'back',
         // Only setting the video to a specified size for large screen, on
         // mobile devices accept the default size.
         width: isMobile() ? params.VIDEO_SIZE['360 X 270'].width : $size.width,

@@ -1,5 +1,5 @@
 # Pre-trained TensorFlow.js models for Windows
-#### --Pre development for windows part is my addition --
+#### --Pre development for windows part is my addition to original repo --
 
 This repository hosts a set of pre-trained models that have been ported to
 TensorFlow.js.
@@ -14,6 +14,39 @@ non-machine learning experts.
 For those interested in contributing a model, please file a [GitHub issue on tfjs](https://github.com/tensorflow/tfjs/issues) to gauge
 interest. We are trying to add models that complement the existing set of models
 and can be used as building blocks in other apps.
+## Pre development for windows
+### Before Clone this Repo
+git should be installed with gitbash enabled for global cmd usage
+
+node should be installed with additional components like VS runtimes
+
+open developer mode for windows for symlink creation
+
+set git config properties in your cmd run as administrator like below.
+
+`git config --global core.symlinks true`
+
+`git config --system core.symlinks true`
+
+### After cloning
+for utils to be ready run at the root folder:
+
+`yarn`
+
+for problems that are because of fixed version packages run at root on gitbash
+
+`./update_yarn_lock.sh`
+
+that should take a while
+
+### Things i have added
+
+I added `--https` to package.json watch commands to package.json watch commands
+
+added demos folder update to update_yarn_lock.sh
+
+added back camera support to pose-detection live_video demo
+
 
 ## Models
 
@@ -67,6 +100,7 @@ and can be used as building blocks in other apps.
   <tr>
     <td><a href="./coco-ssd/demo">source</a></td>
   </tr>
+  <tr>
     <td rowspan="2"><b><a style="white-space:nowrap; display:inline-block;" href="./deeplab"><div style='vertical-align:middle; display:inline;'>DeepLab v3</div></a></b></td>
     <td><a href=""></a></td>
     <td rowspan="2">Semantic segmentation</td>
@@ -145,39 +179,6 @@ and can be used as building blocks in other apps.
     <td><a href="./knn-classifier/demo">source</a></td>
   </tr>
 </table>
-
-## Pre development for windows
-### Before Clone this Repo
-git should be installed with gitbash enabled for global cmd usage
-
-node should be installed with additional components like VS runtimes
-
-open developer mode for windows for symlink creation 
-
-set git config properties in your cmd run as administrator like below.
-
-`git config --global core.symlinks true`
-
-`git config --system core.symlinks true`
-
-### After cloning 
-for utils to be ready run at the root folder:
-
-`yarn`
-
-for problems that are because of fixed version packages run at root on gitbash
-
-`./update_yarn_lock.sh`
-
-that should take a while
-
-### Things i have added
-
-I added `--https` to package.json watch commands to package.json watch commands 
-
-added demos folder update to update_yarn_lock.sh
-
-added back camera support to pose-detection live_video demo
 
 
 ## Development
